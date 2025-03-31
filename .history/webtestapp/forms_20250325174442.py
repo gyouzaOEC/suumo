@@ -1,0 +1,48 @@
+from django import forms
+
+TYPE_CHOICES = (
+    ('house', '賃貸一戸建て'),
+    ('mansion', '賃貸マンション'),
+    ('terace_town', '賃貸テラス、タウンハウス'),
+    ('apartment', '賃貸アパート'),
+)
+
+WARD_CHOICES = (
+       ("Chiyoda-ku","中央区"),
+        ("Chuo-ku","千代田区"),
+        ("Minato-ku","港区"),
+        ("Shinjuku-ku","新宿区"),
+        ("Bunkyo-ku","文京区"),
+        ("Taito-ku","台東区"),
+        ("Sumida-ku","墨田区"),
+        ("Koto-ku","江東区"),
+        ("Shinagawa-ku","品川区"),
+        ("Meguro-ku","目黒区"),
+        ("Ota-ku","大田区"),
+        ("Setagaya-ku","世田谷区"),
+        ("Shibuya-ku","渋谷区"),
+        ("Nakano-ku","中野区"),
+        ("Suginami-ku","杉並区"),
+        ("Toshima-ku","豊島区"),
+        ("Kita-ku","北区"),
+        ("Arakawa-ku","荒川区"),
+        ("Itabashi-ku","板橋区"),
+        ("Nerima-ku","練馬区"),
+        ("Adachi-ku","足立区"),
+        ("Katsushika-ku","葛飾区"),
+        ("Edogawa-ku","江戸川区"),
+)
+
+class dataForm(forms.Form):
+    type = forms.ChoiceField(choices=TYPE_CHOICES,label="種別")
+    year = forms.IntegerField(label='築年数')
+    stair = forms.IntegerField(label='階')
+    fee = forms.IntegerField(label='管理費')
+    area = forms.FloatField(label="専有面積")
+    ward = forms.IntegerField(label='区')
+    walk = forms.IntegerField(label='歩分')
+    fullbasement = forms.IntegerField(label='地下階数')
+    fullstairs = forms.IntegerField(label='')
+    rooms = forms.IntegerField(label='year')
+    sldk = forms.IntegerField(label='year')
+    

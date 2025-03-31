@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>家賃予測アプリ</title>
+</head>
+
+<body>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    
+    <div>
+        <h1 class="title">家賃予測</h1>
+        <form action="{% url 'webtestapp:index' %}" method="post">
+            {% csrf_token %}
+            {% for x in forms %}
+                <label for=""></label>
+                <input type="text">
+            {% endfor %}
+            <input type="submit" value="送信">
+        </form>
+
+    </div>
+</body>
+
+</html>
