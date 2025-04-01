@@ -1,4 +1,5 @@
 このアプリは機械学習を用いて、東京２３区の家賃相場価格を予想するアプリです。
 
-utilsに入ってるスクレピングファイルはhttps://qiita.com/tomyu/items/a08d3180b7cbe63667c9を参考にしました。
+utilsに入ってるスクレピングファイルはhttps://qiita.com/tomyu/items/a08d3180b7cbe63667c9
+を参考にしました。
 
